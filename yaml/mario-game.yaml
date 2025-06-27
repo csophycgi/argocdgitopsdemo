@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: marionew-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 8080
     targetPort: 8080
-    nodePort: 30858  # Optional: specify this if you want fixed port
   selector:
     app: marionew
 ---
